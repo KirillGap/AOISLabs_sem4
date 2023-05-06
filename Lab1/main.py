@@ -1,4 +1,4 @@
-import classes as clas
+import classes
 
 
 def menu():
@@ -10,9 +10,9 @@ def menu():
         print("4) Сумма чисел с плавающей точкой")
         command = int(input("Выберите задание: "))
         if command == 1 or command == 2 or command == 3:
-            first_num = clas.Number(int(input("Введите первое число: ")))
-            second_num = clas.Number(int(input("Введите второе число: ")))
-            answer = clas.Number()
+            first_num = classes.Number(int(input("Введите первое число: ")))
+            second_num = classes.Number(int(input("Введите второе число: ")))
+            answer = classes.Number()
             if command == 1:
                 answer = first_num + second_num
             elif command == 2:
@@ -23,8 +23,8 @@ def menu():
             second_num.show()
             answer.show()
         elif command == 4:
-            first_num = clas.FloatingPointNumber(float(input("Введите первое число: ")))
-            second_num = clas.FloatingPointNumber(float(input("Введите второе число: ")))
+            first_num = classes.FloatingPointNumber(float(input("Введите первое число: ")))
+            second_num = classes.FloatingPointNumber(float(input("Введите второе число: ")))
             first_num.show()
             second_num.show()
             answer = first_num + second_num
