@@ -64,13 +64,14 @@ def sknf(combines, answers, variables=["x1", "x2", "x3"]):
     for i in range(8):
         if not answers[i]:
             Sknf_dec.append(str(i))
+            Sknf += '('
             for j in range(3):
                 if combines[i][j] == 0:
                     Sknf += variables[j]
                 else:
                     Sknf += ('-' + variables[j])
                 Sknf += ' + '
-            Sknf = Sknf[:-3]
+            Sknf = Sknf[:-3] + ')'
             Sknf += ' * '
     Sknf = Sknf[:-3]
 
